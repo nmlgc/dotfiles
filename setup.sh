@@ -5,6 +5,11 @@ ROOT=$(dirname $0)
 # ---
 git config --global user.name "nmlgc"
 git config --global user.email "nmlgc@nmlgc.net"
+
+# Launch a one-off git server from any local repository.
+# (via https://gist.github.com/datagrok/5080545)
+git config --global alias.serve "daemon \
+	--verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/"
 # ---
 
 # Symlink everything that doesn't honor $XDG_CONFIG_HOME.
