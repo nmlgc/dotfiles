@@ -12,10 +12,14 @@ git config --global alias.serve "daemon \
 	--verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/"
 # ---
 
-# Symlink everything that doesn't honor $XDG_CONFIG_HOME.
-link_file() {
+setup_vars() {
 	FILE_IN_HOME=~/$(basename $1)
 	TARGET_OLD=$(readlink -f $FILE_IN_HOME)
+}
+
+# Symlink everything that doesn't honor $XDG_CONFIG_HOME.
+link_file() {
+	setup_vars $1
 
 	cmp --silent "$TARGET_OLD" "$1"
 	EQUAL=$?
