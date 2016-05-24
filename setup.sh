@@ -35,3 +35,14 @@ link_file() {
 for f in $(find $ROOT/non-xdg/ -not -type d -not -wholename $0); do
 	link_file $(readlink -f $f)
 done
+
+# Remove things that once didn't support $XDG_CONFIG_HOME, but now do.
+remove_old() {
+	setup_vars $1
+
+	if [ $TARGET_OLD != $FILE_IN_HOME ] && [ ! -f $TARGET_OLD ]; then
+		rm $FILE_IN_HOME
+	fi
+}
+
+remove_old .minttyrc
