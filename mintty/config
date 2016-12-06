@@ -5,6 +5,7 @@ Locale=C
 Charset=UTF-8
 Transparency=off
 OpaqueWhenFocused=no
+FontRender=uniscribe
 FontIsBold=no
 FontSmoothing=default
 BoldAsColour=no
