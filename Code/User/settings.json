@@ -1,0 +1,15 @@
+// Place your settings in this file to overwrite the default settings
+{
+	"editor.fontFamily": "Meslo LG L",
+	"editor.fontSize": 12,
+	"editor.fontWeight": "600",
+	"editor.insertSpaces": false,
+	"editor.lineHeight": 19,
+	"editor.renderWhitespace": "all",
+	"editor.wrappingColumn": 80,
+	"editor.rulers": [
+		80
+	],
+	"files.insertFinalNewline": true,
+	"files.trimTrailingWhitespace": true
+}
