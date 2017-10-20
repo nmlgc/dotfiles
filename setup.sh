@@ -5,6 +5,7 @@ ROOT=$(dirname $0)
 # ---
 git config --global user.name "nmlgc"
 git config --global user.email "nmlgc@nmlgc.net"
+git config --global core.quotePath false
 
 # Launch a one-off git server from any local repository.
 # (via https://gist.github.com/datagrok/5080545)
