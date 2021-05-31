@@ -6,6 +6,10 @@ ROOT=$(dirname $0)
 git config --global user.name "nmlgc"
 git config --global user.email "nmlgc@nmlgc.net"
 git config --global core.quotePath false
+# Make rebasing easier (automatically stash changes
+# and automatically squash commits created with --fixup)
+git config --global rebase.autostash true
+git config --global rebase.autosquash true
 
 # Launch a one-off git server from any local repository.
 # (via https://gist.github.com/datagrok/5080545)
