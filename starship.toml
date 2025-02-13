@@ -1,0 +1,32 @@
+'$schema' = 'https://starship.rs/config-schema.json'
+add_newline = false
+
+[c]
+disabled = true
+
+[cmd_duration]
+format = ' ⌚ [$duration]($style)'
+
+[git_branch]
+format = '[$symbol$branch(:$remote_branch)]($style) '
+symbol = ''
+
+[git_status]
+format = '([$ahead_behind$all_status]($style))'
+conflicted = ' «${count}'
+ahead = '[⇡${count}](bold green)'
+stashed = ' [✭ ${count}](bold bright-cyan)'
+modified = ' [!${count}](bold yellow)'
+staged = ' [+${count}](bold green)'
+deleted = ' ✘ ${count}'
+untracked = ' [?${count}](bold #aaaaaa)'
+renamed = ' [»${count}](bold green)'
+
+[golang]
+disabled = true
+
+[line_break]
+disabled = true
+
+[lua]
+disabled = true
