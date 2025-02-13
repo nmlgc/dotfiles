@@ -1,5 +1,6 @@
 #!/bin/sh
-ROOT=$(dirname $0)
+ROOT=$(cd "$(dirname "$0")" && pwd)
+export MSYS=winsymlinks:nativestrict
 
 # Git
 # ---
@@ -63,3 +64,14 @@ remove_old() {
 }
 
 remove_old .minttyrc
+
+# Symlink configurations to non-standard paths
+mkdir -p "$HOME/.config/starship"
+ln -fs "$ROOT/starship.toml" "$HOME/.config/starship/starship.toml"
+
+if [ "$OSTYPE" = "cygwin" ]; then
+	mkdir -p "$LOCALAPPDATA\\clink"
+	for f in $ROOT/clink/*; do
+		ln -fs "$f" "$LOCALAPPDATA\\clink\\$(basename "$f")"
+	done
+fi
