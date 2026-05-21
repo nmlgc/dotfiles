@@ -3,6 +3,18 @@ ROOT=$(dirname $0)
 
 # Git
 # ---
+
+git config --global alias.ap "add -p"
+git config --global alias.bg "bisect good"
+git config --global alias.bb "bisect bad"
+git config --global alias.br "bisect reset"
+git config --global alias.c "commit"
+git config --global alias.ca "commit --am"
+git config --global alias.can "commit --am --no-e"
+git config --global alias.cf "commit --fixup"
+git config --global alias.rc "rebase --con"
+git config --global alias.ri "rebase -i"
+git config --global alias.rs "rebase --skip"
 git config --global user.name "nmlgc"
 git config --global user.email "nmlgc@nmlgc.net"
 git config --global core.quotePath false
