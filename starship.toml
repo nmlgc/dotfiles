@@ -30,3 +30,8 @@ disabled = true
 
 [lua]
 disabled = true
+
+[status]
+disabled = false
+format = ' [$symbol$status]($style)'
+symbol = '⮑'
